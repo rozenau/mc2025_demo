@@ -1,0 +1,4 @@
+/.cpptest
+/reports
+*.bdf
+*.o

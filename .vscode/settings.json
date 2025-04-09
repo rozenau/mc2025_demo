@@ -1,0 +1,5 @@
+{
+    "cpptest.testConfiguration": "MISRAC2025_local.properties",
+    "cpptest.compilerIdentifier": "gcc_8-64",
+    "cpptest.commandLinePattern": "cpptestcli ${stopFile} ${compilerConfig} ${testConfig} ${reportDir} ${selectedFiles} -module . -trace make all"
+}

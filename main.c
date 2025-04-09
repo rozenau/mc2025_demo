@@ -7,23 +7,23 @@
 #include <stdlib.h>
 
 
-static void processMsg(const msg_t* msg)
-{
-    int32_t result = 0;
-    switch (msg->kind) {
-        case INT32:
-            result = processInt(msg->data.i);
-            break;
-        case FLOAT:
-            result = processFloat(msg->data.f);
-            break;
-        case VOID:
-        	return;
-        default:
-            break;
-    }
-    printStatus(result);
-}
+// static void processMsg(const msg_t* msg)
+// {
+//     int32_t result = 0;
+//     switch (msg->kind) {
+//         case INT32:
+//             result = processInt(msg->data.i);
+//             break;
+//         case FLOAT:
+//             result = processFloat(msg->data.f);
+//             break;
+//         case VOID:
+//         	return;
+//         default:
+//             break;
+//     }
+//     printStatus(result);
+// }
 
 static void main_loop(void)
 {

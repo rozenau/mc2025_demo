@@ -27,21 +27,21 @@ static void processMsg(const msg_t* msg)
 
 static void main_loop(void)
 {
-    // while (true) {
-    //     int32_t* i = getInt();
-    //     if (i) {
-    //         msg_t msg = createIntMsg(*i);
-    //         processMsg(&msg);
-    //     }
-    //     float* f = getFloat();
-    //     if (f) {
-    //         msg_t msg = createFloatMsg(*f);
-    //         processMsg(&msg);
-    //     }
-    //     if (!i && !f) {
-    //         return;
-    //     }
-    // }
+    while (true) {
+        int32_t* i = getInt();
+        if (i) {
+            msg_t msg = createIntMsg(*i);
+            processMsg(&msg);
+        }
+        float* f = getFloat();
+        if (f) {
+            msg_t msg = createFloatMsg(*f);
+            processMsg(&msg);
+        }
+        if (!i && !f) {
+            return;
+        }
+    }
 }
 
 int main(void)

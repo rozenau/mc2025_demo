@@ -1,1 +1,63 @@
-{ "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json", "version": "2.1.0", "runs": [ {"tool": { "driver": {"name": "C/C++test","semanticVersion": "2025.1.0","rules": [{ "id": "MISRAC2025-RULE_19_3-a", "name": "Do not read the value of a non-active union field", "shortDescription": { "text": "Do not read the value of a non-active union field" }, "fullDescription": { "text": "Do not read the value of a non-active union field [MISRAC2025-RULE_19_3-a]" }, "defaultConfiguration": { "level": "error" }, "help": { "text": "Do not read the value of a non-active union field [MISRAC2025-RULE_19_3-a]" }, "properties": { "tags": [ "MISRA C 2025", "Rule 19.3 (Required) A union member shall not be read unless it has been previously set" ] } }] } }, "results": [{ "ruleId": "MISRAC2025-RULE_19_3-a", "level": "error", "message": { "text": "Non active field \"msg->data.i\" is used. Active field: msg->data.f" }, "partialFingerprints": { "lineHash": "1514583623" }, "locations": [ { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 14, "startColumn": 1 } } } ], "codeFlows": [ { "threadFlows": [ { "locations": [ { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 27, "startColumn": 1 } }, "message": { "text": "Violation Cause - Start of the path" } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 29, "startColumn": 1 } }, "message": { "text": "  *** Loop condition evaluation: 1 (true)  *** Entering the loop" } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 30, "startColumn": 1 } } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 31, "startColumn": 1 } }, "message": { "text": "  *** Condition evaluation: (i != 0) (assuming false)" } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 35, "startColumn": 1 } } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 36, "startColumn": 1 } }, "message": { "text": "  *** Condition evaluation: (f != 0) (assuming true)" } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 37, "startColumn": 1 } } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/msg.c" }, "region": { "startLine": 13, "startColumn": 1 } } }, "nestingLevel": 1 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/msg.c" }, "region": { "startLine": 14, "startColumn": 1 } }, "message": { "text": "  *** Activate field \"msg.data.f\"" } }, "nestingLevel": 1 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/msg.c" }, "region": { "startLine": 15, "startColumn": 1 } } }, "nestingLevel": 1 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/msg.c" }, "region": { "startLine": 16, "startColumn": 1 } } }, "nestingLevel": 1 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 38, "startColumn": 1 } } }, "nestingLevel": 0 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 11, "startColumn": 1 } } }, "nestingLevel": 1 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 12, "startColumn": 1 } }, "message": { "text": "  *** Switch evaluation: msg->kind (\"case 0\")" } }, "nestingLevel": 1 }, { "location": { "physicalLocation": { "artifactLocation": { "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c" }, "region": { "startLine": 14, "startColumn": 1 } }, "message": { "text": "Violation Point - Point where non-active field is read" } }, "nestingLevel": 1 } ] } ] } ] }] } ] }
+{
+    "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "C/C++test",
+                    "semanticVersion": "2025.1.0",
+                    "rules": [
+                        {
+                            "id": "MISRAC2025-RULE_19_3-a",
+                            "name": "Do not read the value of a non-active union field",
+                            "shortDescription": {
+                                "text": "Do not read the value of a non-active union field"
+                            },
+                            "fullDescription": {
+                                "text": "Do not read the value of a non-active union field [MISRAC2025-RULE_19_3-a]"
+                            },
+                            "defaultConfiguration": {
+                                "level": "error"
+                            },
+                            "help": {
+                                "text": "Do not read the value of a non-active union field [MISRAC2025-RULE_19_3-a]"
+                            },
+                            "properties": {
+                                "tags": [
+                                    "MISRA C 2025",
+                                    "Rule 19.3 (Required) A union member shall not be read unless it has been previously set"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "results": [
+                {
+                    "ruleId": "MISRAC2025-RULE_19_3-a",
+                    "level": "error",
+                    "message": {
+                        "text": "Non active field \"msg->data.i\" is used. Active field: msg->data.f"
+                    },
+                    "partialFingerprints": {
+                        "lineHash": "1514583623"
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "file:/home/rozenau/mc2025_webinar/actions-runner/_work/mc2025_demo/mc2025_demo/main.c"
+                                },
+                                "region": {
+                                    "startLine": 14,
+                                    "startColumn": 1
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

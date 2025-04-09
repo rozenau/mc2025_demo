@@ -1,4 +1,3 @@
-
 #include "msg.h"
 #include "com.h"
 #include "process.h"
@@ -29,16 +28,16 @@ static void main_loop(void)
 {
     while (true) {
         int32_t* i = getInt();
-        if (i) {
+        if (i != NULL) {
             msg_t msg = createIntMsg(*i);
             processMsg(&msg);
         }
         float* f = getFloat();
-        if (f) {
+        if (f != NULL) {
             msg_t msg = createFloatMsg(*f);
             processMsg(&msg);
         }
-        if (!i && !f) {
+        if (i == NULL && f == NULL) {
             return;
         }
     }

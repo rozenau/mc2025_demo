@@ -11,7 +11,7 @@ msg_t createIntMsg(int32_t i)
 msg_t createFloatMsg(float f)
 {
     msg_t msg;
-    msg.kind = INT32;
+    msg.kind = FLOAT;
     msg.data.f = f;
     return msg;
 }
